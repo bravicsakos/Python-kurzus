@@ -2,6 +2,14 @@
 
 import math
 
+def get_list(n):
+    eleje = list(range(1,n+1,2))
+    vege = eleje[:-1][::-1]
+    return eleje + vege
+
+def draw(li,n):
+    for i in li:
+        print(("*"*i).center(n))
 
 def gyemantosito(magassag):
     if magassag % 2 == 0:
