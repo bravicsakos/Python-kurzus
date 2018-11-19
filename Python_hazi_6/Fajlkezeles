@@ -1,0 +1,19 @@
+#!/usr/bin/env python3
+
+
+def main():
+    with open("string1.py", "r") as filein:
+        with open("string1_clean.py", "w") as fileout:
+            for line in filein:
+                s = line.lstrip()
+                if len(s) == 0:
+                    fileout.write("\n")
+                elif s[0] != "#":
+                    fileout.write(line)
+
+
+#############################################################################
+
+
+if __name__ == "__main__":
+    main()
